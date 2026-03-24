@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mediaquery.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+</head>
+<body onresize="mudouTamanho()"> <!--para criar mostrar o menu quando a tela estiver grande-->
+    <header>
+        <h1>Meu site</h1>
+        <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>    
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Testando Media Query</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat omnis aliquid ratione nostrum exercitationem, eligendi reprehenderit repellat eaque culpa, sunt beatae doloribus voluptatum dolorum odio aliquam, quia possimus qui? Perferendis!
+            Magni, vel asperiores! Id eum modi ducimus atque omnis, neque porro a, at saepe, nihil veritatis doloremque! Labore illo laboriosam molestiae rerum sequi repellat similique iste dolorum illum, ipsa id?
+            Debitis aliquid aspernatur vitae! Ullam consequatur quae minima commodi velit veritatis! Ipsum officiis praesentium obcaecati ullam! Veniam distinctio quis nesciunt delectus debitis explicabo, et quae tenetur. Expedita dolores repellat eligendi!
+            Nisi quos in, sequi corrupti recusandae eveniet possimus? Dolorum repellendus itaque doloribus amet voluptate, impedit atque ex corporis quibusdam at sunt reprehenderit quidem incidunt doloremque. Quis obcaecati doloribus enim ad?</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, nesciunt enim, repellat vitae itaque expedita dicta doloremque iure provident deleniti odit. Rerum inventore illum vel, autem voluptas aut et id!
+            Neque placeat ipsum earum officiis provident, error incidunt voluptatibus eius. Est eaque, temporibus omnis officiis possimus minima sit cum, repudiandae, cupiditate laudantium id sapiente minus iste perspiciatis veniam magnam. Quos.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo doloremque voluptas assumenda nam, velit laborum saepe corrupti adipisci corporis molestiae libero alias aspernatur? Quasi officia rerum quaerat mollitia, inventore cumque.
+            Impedit quisquam nesciunt ex eos magni nam voluptates esse tempora cum quaerat nobis quos, iure veniam culpa voluptate atque aut ipsum cumque, aperiam distinctio hic ullam dignissimos autem omnis! Sint.
+            Animi magni dignissimos inventore totam quas tenetur exercitationem cumque esse, dolorum, obcaecati eius? Ipsum dicta non obcaecati voluptatem, praesentium odit voluptates quia suscipit exercitationem officia ad, voluptatum ea eveniet perspiciatis!
+            Aspernatur dolor placeat repellendus nam magnam sunt molestiae omnis, saepe qui sit expedita exercitationem magni alias, esse vero. Atque officiis assumenda voluptatum excepturi, fugiat cumque saepe aspernatur voluptate hic voluptates!</p>
+        </article>
+    </main>
+    
+    <!--Função criada para criar a rolagem do menu-->
+    <script>
+        function mudouTamanho () {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'    
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+        
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+</html>
